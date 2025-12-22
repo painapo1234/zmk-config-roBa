@@ -7,7 +7,7 @@ manifest:
   projects:
     - name: zmk
       remote: kumamuk-git
-      revision: pointing         # v0.3ではなく「pointing」を指定
+      revision: pointing      # ここを pointing に変更
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
