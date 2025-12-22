@@ -1,23 +1,16 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
-    - name: kumamuk-git
-      url-base: https://github.com/kumamuk-git
-    # ↓ここを追加
+      url: https://github.com/zmkfirmware/zmk
+    # 下記を追加
     - name: petejohanson
-      url-base: https://github.com/petejohanson
+      url: https://github.com/petejohanson
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: v0.3-branch
-      import: app/west.yml
-    - name: zmk-pmw3610-driver
-      remote: kumamuk-git
       revision: main
-    # ↓ここを追加
+      import: app/west.yml
+    # 下記を追加
     - name: zmk-input-processors
       remote: petejohanson
       revision: main
-  self:
-    path: config
