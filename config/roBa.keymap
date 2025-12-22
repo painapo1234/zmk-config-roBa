@@ -87,6 +87,8 @@
         
     };
 
+};
+
     keymap {
         compatible = "zmk,keymap";
 
