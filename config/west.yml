@@ -4,10 +4,13 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: kumamuk-git
       url-base: https://github.com/kumamuk-git
+    # petejohanson氏のリポジトリを追加（マウス機能の本家）
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: zmkfirmware
-      revision: v0.3-branch
+      remote: petejohanson        # ここを変更
+      revision: feat/pointers-move-scroll # ここを変更
       import: app/west.yml
     - name: zmk-pmw3610-driver
       remote: kumamuk-git
