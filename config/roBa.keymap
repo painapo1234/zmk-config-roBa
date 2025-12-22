@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// Mac向けに1クリックのスクロール量を調整
+// スクロール量の定義
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 140
 
 &mt {
@@ -56,23 +56,24 @@
     };
 
     behaviors {
+        // --- ここから修正 ---
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-        };
+        }; // ここにカッコとセミコロンが必要
 
-        // マウススクロール用のエンコーダー設定
         scroll_encoder: scroll_encoder {
             compatible = "zmk,behavior-sensor-rotate";
+            label = "SCROLL_ENCODER";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-            // Macで「1回し」を確実に認識させるための設定
             tap-ms = <30>; 
-            resolution = <20>;
+            // resolution を一旦削除（ビルドエラーの原因になりやすいため）
         };
+        // --- ここまで ---
     };
 
     keymap {
