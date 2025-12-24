@@ -48,17 +48,22 @@
 
         leftsc {
             bindings = <&kp LG(LEFT)>;
-            key-positions = <18 17>;
+            key-positions = <18 19>;
         };
 
         rightsc {
             bindings = <&kp LG(RIGHT_ARROW)>;
-            key-positions = <18 19>;
+            key-positions = <19 20>;
         };
 
         fullsc {
             bindings = <&kp LG(UP_ARROW)>;
-            key-positions = <17 18 19>;
+            key-positions = <18 19 20>;
+        };
+
+        missioncont {
+            bindings = <&kp LC(UP_ARROW)>;
+            key-positions = <13 18>;
         };
     };
 
