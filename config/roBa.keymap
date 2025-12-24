@@ -45,6 +45,21 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        leftsc {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <18 19>;
+        };
+
+        rightsc {
+            bindings = <&kp LG(RIGHT_ARROW)>;
+            key-positions = <18 19>;
+        };
+
+        fullsc {
+            bindings = <&kp LG(UP_ARROW)>;
+            key-positions = <17 18 19>;
+        };
     };
 
     macros {
