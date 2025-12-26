@@ -68,7 +68,7 @@
 
         cmd {
             bindings = <&kp LEFT_COMMAND>;
-            key-positions = <12 13>;
+            key-positions = <18>;
         };
     };
 
