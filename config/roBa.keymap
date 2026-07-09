@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // 1ノッチあたりのスクロール量
-
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
@@ -92,7 +91,6 @@
         };
 
         // マウススクロール用の設定
-
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
@@ -115,7 +113,6 @@
             >;
 
             // デフォルトはマウススクロール
-
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
@@ -128,7 +125,6 @@
             >;
 
             // ★追加：文字移動用（上:左 / 下:右）
-
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
@@ -152,7 +148,6 @@
             >;
 
             // ★変更：以前のページアップダウンから文字移動に変更
-
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
@@ -182,8 +177,8 @@
             bindings = <
 &trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &trans
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
